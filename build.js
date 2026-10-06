@@ -1,6 +1,6 @@
 /**
- * VIHARI Matrimony Registration Portal - Single HTML Build Script
- * Bundles HTML, CSS, JavaScript, and Base64 Logo into a 100% self-contained
+ * Vihar Vivaha Matrimony Registration Portal - Single HTML Build Script
+ * Bundles HTML, CSS, JavaScript, Logo, and Hero Wedding Couple Image into a 100% self-contained
  * single HTML deployment file.
  */
 
@@ -10,7 +10,7 @@ const path = require('path');
 const ROOT_DIR = __dirname;
 const DIST_DIR = path.join(ROOT_DIR, 'dist');
 
-console.log('⚡ Starting VIHARI Single HTML Build...');
+console.log('⚡ Starting Vihar Vivaha Single HTML Build...');
 
 // Ensure dist directory exists
 if (!fs.existsSync(DIST_DIR)) {
@@ -26,8 +26,12 @@ const appSource = fs.readFileSync(path.join(ROOT_DIR, 'js', 'app.js'), 'utf8');
 // Read Logo & Convert to Base64 Data URI
 const logoBuffer = fs.readFileSync(path.join(ROOT_DIR, 'images', 'vihari-logo.png'));
 const logoBase64 = `data:image/png;base64,${logoBuffer.toString('base64')}`;
-
 console.log(`📦 Embedded Logo: ${Math.round(logoBuffer.length / 1024)} KB encoded to Base64`);
+
+// Read Hero Wedding Couple Image & Convert to Base64 Data URI
+const heroBuffer = fs.readFileSync(path.join(ROOT_DIR, 'images', 'hero-wedding-couple.jpg'));
+const heroBase64 = `data:image/jpeg;base64,${heroBuffer.toString('base64')}`;
+console.log(`📦 Embedded Hero Wedding Image: ${Math.round(heroBuffer.length / 1024)} KB encoded to Base64`);
 
 // Build Single File HTML
 let bundledHtml = htmlSource;
@@ -42,6 +46,9 @@ bundledHtml = bundledHtml.replace(/<script src="js\/config\.js(?:\?[^"]*)?"><\/s
 
 // Replace all occurrences of images/vihari-logo.png (including query params) with Base64 data URI
 bundledHtml = bundledHtml.replace(/images\/vihari-logo\.png(?:\?[^"'\s\)]*)?/g, logoBase64);
+
+// Replace all occurrences of images/hero-wedding-couple.jpg with Base64 data URI
+bundledHtml = bundledHtml.replace(/images\/hero-wedding-couple\.jpg(?:\?[^"'\s\)]*)?/g, heroBase64);
 
 // Write output files
 const distIndexPath = path.join(DIST_DIR, 'index.html');
