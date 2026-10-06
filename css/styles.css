@@ -187,16 +187,31 @@ button, input, select {
   text-decoration: none;
 }
 
-.brand-logo-img {
-  height: 52px;
-  width: auto;
-  object-fit: contain;
-  border-radius: var(--radius-sm);
-  transition: transform var(--transition-fast);
+.brand-logo-frame {
+  width: 58px;
+  height: 58px;
+  background: #FFFFFF;
+  border-radius: var(--radius-md);
+  padding: 3px;
+  box-shadow: 0 2px 10px rgba(21, 127, 149, 0.15);
+  border: 1.5px solid var(--color-primary-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-.brand-wrapper:hover .brand-logo-img {
-  transform: scale(1.03);
+.brand-wrapper:hover .brand-logo-frame {
+  transform: scale(1.04);
+  box-shadow: 0 4px 14px rgba(21, 127, 149, 0.22);
+}
+
+.brand-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .brand-text {
@@ -284,6 +299,39 @@ button, input, select {
   text-align: center;
   position: relative;
   z-index: 2;
+}
+
+/* Hero Brand Showcase Card */
+.hero-brand-showcase {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.hero-logo-card {
+  background: #FFFFFF;
+  padding: 1.25rem 2.25rem 1rem;
+  border-radius: var(--radius-xl);
+  border: 2px solid var(--color-primary-border);
+  box-shadow: 0 12px 36px rgba(21, 127, 149, 0.12);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.hero-logo-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 42px rgba(21, 127, 149, 0.2);
+}
+
+.hero-logo-image {
+  max-width: 220px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
 }
 
 .hero-badge {
@@ -665,6 +713,27 @@ button, input, select {
   padding: 1.6rem 1.25rem;
   text-align: center;
   position: relative;
+}
+
+.form-logo-badge {
+  width: 64px;
+  height: 64px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  padding: 4px;
+  margin: 0 auto 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.form-header-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
 }
 
 .form-card-title {
@@ -1269,12 +1338,23 @@ button, input, select {
   margin-bottom: 0.85rem;
 }
 
-.footer-logo-img {
-  height: 52px;
-  width: auto;
-  border-radius: var(--radius-sm);
+.footer-logo-frame {
+  width: 70px;
+  height: 70px;
   background: #FFFFFF;
-  padding: 2px;
+  border-radius: var(--radius-md);
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .footer-brand-title {
@@ -1288,7 +1368,7 @@ button, input, select {
   color: #50BE89;
   font-style: italic;
   font-size: 0.84rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.4rem;
 }
 
 .footer-address {

@@ -1,5 +1,6 @@
 /**
  * Zero-dependency local development preview server for Node.js
+ * Configured with Cache-Control headers to ensure instantaneous updates.
  */
 const http = require('http');
 const fs = require('fs');
@@ -36,14 +37,20 @@ const server = http.createServer((req, res) => {
     }
 
     const contentType = MIME_TYPES[ext] || 'application/octet-stream';
-    res.writeHead(200, { 'Content-Type': contentType });
+    res.writeHead(200, {
+      'Content-Type': contentType,
+      'Cache-Control': 'no-cache, no-store, must-revalidate',
+      'Pragma': 'no-cache',
+      'Expires': '0'
+    });
     fs.createReadStream(filePath).pipe(res);
   });
 });
 
 server.listen(PORT, () => {
   console.log(`\n======================================================`);
-  console.log(`  Vihari Vivaha Event Registration Site Live`);
+  console.log(`  VIHARI — "your comfort our care"`);
+  console.log(`  Matrimony Event Registration Portal Live`);
   console.log(`  Local URL: http://localhost:${PORT}`);
   console.log(`======================================================\n`);
 });
