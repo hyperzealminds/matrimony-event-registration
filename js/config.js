@@ -1,19 +1,20 @@
 /**
- * VIHARI - Matrimony Event Registration Configuration
- * Easily update event details, fee, contact info, and external links here.
+ * Vihar Vivaha - Matrimony Event Registration Configuration
+ * Brand: Vihar Vivaha ("your comfort our care")
  */
 const EVENT_CONFIG = {
   brand: {
-    name: "VIHARI",
+    name: "Vihar Vivaha",
+    altName: "Vihar Vivaha",
     tagline: "your comfort our care",
     serviceName: "Matrimonial Services",
-    fullTitle: "VIHARI — Matrimonial Services",
+    fullTitle: "Vihar Vivaha — your comfort our care",
     logoPath: "images/vihari-logo.png",
     address: "#73, 18th Cross, Rajajinagar 1st Block, Bengaluru, Karnataka – 560010",
     phone: "+91 99861 11169",
     displayPhone: "+91 99861 11169",
     whatsapp: "+919986111169",
-    email: "hello@viharivivaha.com",
+    email: "hello@viharvivaha.com",
     hours: "10:00 AM – 7:00 PM (Mon – Sat)"
   },
   event: {
@@ -37,7 +38,7 @@ const EVENT_CONFIG = {
     googleForm: "https://docs.google.com/forms/d/e/1FAIpQLScRCZmPoBXhXcD40til16FLtkMhsgwOcsPWTtJb7_jG8bpowQ/viewform",
     // Support WhatsApp link generator
     get whatsappSupport() {
-      const msg = encodeURIComponent("Hello VIHARI team, I have a query regarding North Karnataka Matrimony Event registration.");
+      const msg = encodeURIComponent("Hello Vihar Vivaha team, I have a query regarding North Karnataka Matrimony Event registration.");
       return `https://wa.me/919986111169?text=${msg}`;
     }
   },

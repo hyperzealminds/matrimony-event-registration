@@ -1,5 +1,5 @@
 /**
- * Vihari Vivaha - Matrimony Event Registration Application Logic
+ * Vihar Vivaha - Matrimony Event Registration Application Logic
  * Clean, lightweight, reliable, zero third-party framework dependencies.
  */
 

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   VIHARI - Matrimony Event Registration Stylesheet
+   Vihar Vivaha - Matrimony Event Registration Stylesheet
    Brand Identity: "your comfort our care"
    Color Palette: Vibrant Teal & Fresh Emerald Green Gradients,
                   Soft Ivory/Silk Backgrounds, Auspicious Gold Accents
@@ -332,6 +332,25 @@ button, input, select {
   height: auto;
   object-fit: contain;
   border-radius: var(--radius-sm);
+}
+
+.hero-brand-text-banner {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-text-title);
+  margin-top: 0.5rem;
+  letter-spacing: 0.3px;
+}
+
+.hero-brand-tagline {
+  font-family: var(--font-sans);
+  font-style: italic;
+  color: var(--color-primary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-top: 0.2rem;
 }
 
 .hero-badge {

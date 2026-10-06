@@ -1,7 +1,7 @@
 {
-  "name": "vihari-matrimony-registration",
+  "name": "vihar-vivaha-matrimony-registration",
   "version": "1.0.0",
-  "description": "VIHARI Matrimony Event Registration Portal (your comfort our care) - North Karnataka Matrimony Meet & Biodata Sammelana",
+  "description": "Vihar Vivaha Matrimony Event Registration Portal (your comfort our care) - North Karnataka Matrimony Meet & Biodata Sammelana",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -10,7 +10,7 @@
   },
   "keywords": [
     "matrimony",
-    "vihari",
+    "vihar-vivaha",
     "registration",
     "razorpay",
     "portal",

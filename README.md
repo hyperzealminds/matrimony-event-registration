@@ -1,15 +1,15 @@
-# VIHARI — Matrimony Event Registration Portal
+# Vihar Vivaha — Matrimony Event Registration Portal
 > **"your comfort our care"**
 
-A modern, responsive, mobile-first registration portal for the **North Karnataka Matrimony Meet & Biodata Sammelana** organized by **VIHARI**.
+A modern, responsive, mobile-first registration portal for the **North Karnataka Matrimony Meet & Biodata Sammelana** organized by **Vihar Vivaha**.
 
-Designed specifically for an Indian matrimonial audience: trustworthy, culturally respectful, featuring the official VIHARI brand aesthetic (Ocean Teal `#157F95`, Fresh Emerald Green `#36A36E`, Soft Silk Ivory `#F8FBFA`, and Auspicious Warm Gold `#C28F28`), with an intuitive 3-step registration flow.
+Designed specifically for an Indian matrimonial audience: trustworthy, culturally respectful, featuring the official Vihar Vivaha brand aesthetic (Ocean Teal `#157F95`, Fresh Emerald Green `#36A36E`, Soft Silk Ivory `#F8FBFA`, and Auspicious Warm Gold `#C28F28`), with an intuitive 3-step registration flow.
 
 ---
 
 ## 🌟 Key Features
 
-1. **Official VIHARI Branding & Visual Identity:**
+1. **Official Vihar Vivaha Branding & Visual Identity:**
    - Official brand logo featuring the soaring winged emblem and tagline: *"your comfort our care"*.
    - Modern, harmonious color palette: Teal (`#157F95`) and Emerald Green (`#36A36E`) gradients with champagne gold accents.
    - Clean typography using Google Fonts *Playfair Display* (luxury editorial serif) and *Plus Jakarta Sans* (modern UI sans-serif).
@@ -39,12 +39,12 @@ matrimony-event-registration/
 │
 ├── index.html                               # Source semantic HTML5 application
 ├── css/
-│   └── styles.css                           # VIHARI Design System & responsive styling
+│   └── styles.css                           # Vihar Vivaha Design System & responsive styling
 ├── js/
 │   ├── config.js                            # Central brand, event details, fees & URLs
 │   └── app.js                               # Form validation, local storage & modal logic
 ├── images/
-│   ├── vihari-logo.png                      # Official high-resolution VIHARI brand logo
+│   ├── vihari-logo.png                      # Official high-resolution brand logo
 │   └── favicon.png                          # Site favicon
 ├── dist/
 │   └── index.html                           # 🚀 Bundled Single-File HTML build (ready to deploy)
@@ -126,10 +126,10 @@ Event text, fees, dates, and contact numbers can be updated in `js/config.js`:
 ```javascript
 const EVENT_CONFIG = {
   brand: {
-    name: "VIHARI",
+    name: "Vihar Vivaha",
     tagline: "your comfort our care",
     phone: "+91 99861 11169",
-    email: "hello@viharivivaha.com",
+    email: "hello@viharvivaha.com",
     address: "#73, 18th Cross, Rajajinagar 1st Block, Bengaluru, Karnataka – 560010"
   },
   event: {

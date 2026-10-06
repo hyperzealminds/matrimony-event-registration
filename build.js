@@ -34,14 +34,14 @@ let bundledHtml = htmlSource;
 
 // Replace stylesheet link with inlined <style>
 const styleTag = `  <!-- Inlined Stylesheet for Single HTML Deployment -->\n  <style>\n${cssSource}\n  </style>`;
-bundledHtml = bundledHtml.replace(/<link rel="stylesheet" href="css\/styles\.css">/, styleTag);
+bundledHtml = bundledHtml.replace(/<link rel="stylesheet" href="css\/styles\.css(?:\?[^"]*)?">/, styleTag);
 
 // Replace script tags with inlined scripts
 const scriptTags = `  <!-- Inlined Application Logic for Single HTML Deployment -->\n  <script>\n${configSource}\n  </script>\n  <script>\n${appSource}\n  </script>`;
-bundledHtml = bundledHtml.replace(/<script src="js\/config\.js"><\/script>\s*<script src="js\/app\.js"><\/script>/, scriptTags);
+bundledHtml = bundledHtml.replace(/<script src="js\/config\.js(?:\?[^"]*)?"><\/script>\s*<script src="js\/app\.js(?:\?[^"]*)?"><\/script>/, scriptTags);
 
-// Replace all occurrences of images/vihari-logo.png with the Base64 data URI
-bundledHtml = bundledHtml.replace(/images\/vihari-logo\.png/g, logoBase64);
+// Replace all occurrences of images/vihari-logo.png (including query params) with Base64 data URI
+bundledHtml = bundledHtml.replace(/images\/vihari-logo\.png(?:\?[^"'\s\)]*)?/g, logoBase64);
 
 // Write output files
 const distIndexPath = path.join(DIST_DIR, 'index.html');
