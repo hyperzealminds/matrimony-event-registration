@@ -1,0 +1,21 @@
+{
+  "name": "vihari-matrimony-registration",
+  "version": "1.0.0",
+  "description": "VIHARI Matrimony Event Registration Portal (your comfort our care) - North Karnataka Matrimony Meet & Biodata Sammelana",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "node build.js",
+    "preview": "node server.js"
+  },
+  "keywords": [
+    "matrimony",
+    "vihari",
+    "registration",
+    "razorpay",
+    "portal",
+    "sammelana"
+  ],
+  "author": "Hyperzeal Minds <hyperzealminds@gmail.com>",
+  "license": "ISC"
+}
